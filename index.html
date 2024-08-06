@@ -69,8 +69,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             background-color: black;
             color: white;
             display: none;
@@ -86,13 +86,13 @@
         }
         .code-lines {
             position: absolute;
-            top: 20px; /* Ajuste pour un bon alignement */
-            left: 20px; /* Ajuste pour un bon alignement */
-            color: orange; /* Couleur du texte en orange */
+            top: 20px;
+            left: 20px;
+            color: orange;
             font-family: monospace;
             font-size: 11px;
             white-space: pre;
-            text-align: left; /* Aligner le texte à gauche */
+            text-align: left;
         }
     </style>
 </head>
@@ -210,7 +210,7 @@
                                 if (messageIndex < messages.length) {
                                     codeLines.textContent += messages[messageIndex] + '\n'; // Ajoute le message actuel
                                     messageIndex++;
-                                                                        setTimeout(showNextMessage, delay[messageIndex - 1]);
+                                    setTimeout(showNextMessage, delay[messageIndex - 1]);
                                 } else {
                                     setTimeout(() => {
                                         blackScreen.style.display = 'none';
